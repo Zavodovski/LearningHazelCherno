@@ -38,7 +38,7 @@ namespace Hazel {
 
 		std::string ToString() const override
 		{
-			std::string ss;
+			std::stringstream ss;
 			ss << "MouseScrolledEvent: " << GetXOffset() << ", " << GetYOffset();
 			return ss.str();
 		}
@@ -64,7 +64,7 @@ namespace Hazel {
 	class HAZEL_API MouseButtonPressedEvent : public MouseButtonEvent
 	{
 	public:
-		MouseButtonPressedEvent(int Button) : MouseButtonEvent(button) { }
+		MouseButtonPressedEvent(int Button) : MouseButtonEvent(Button) { }
 
 		std::string ToString() const override
 		{
